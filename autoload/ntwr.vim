@@ -6,9 +6,9 @@ endfunction
 
 function! ntwr#SyncTree(event)
   let path = a:event.subject
-  if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
-      call JumpToNERDTreeWindow()
-      call SetNerdTreeWindowSize()
+  if &modifiable && ntwr#IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
+      call ntwr#JumpToNERDTreeWindow()
+      call ntwr#SetNerdTreeWindowSize()
       wincmd p
   endif
 endfunction
