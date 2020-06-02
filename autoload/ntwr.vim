@@ -38,8 +38,8 @@ endfunction
 
 function! ntwr#SetNERDTreeWindowResizerEvents()
     if exists("g:NERDTreePathNotifier") && g:NERDTreeWindowResizer_RunOnce
-        call g:NERDTreePathNotifier.AddListener('refresh', 'SyncTree')
-        call g:NERDTreePathNotifier.AddListener('refreshFlags', 'SyncTree')
+        call g:NERDTreePathNotifier.AddListener('refresh', 'ntwr#SyncTree')
+        call g:NERDTreePathNotifier.AddListener('refreshFlags', 'ntwr#SyncTree')
         let g:NERDTreeWindowResizer_RunOnce = 0
     endif
 endfunction
