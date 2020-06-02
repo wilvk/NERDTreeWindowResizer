@@ -23,7 +23,7 @@ endfunction
 
 function! ntwr#SetNerdTreeWindowSize()
     let lineLength = 0
-    let maxLineLength = g:NERDTreeWindowResizer_CurrentSize
+    let maxLineLength = 0
     let lineCount = line('$')
     for rowNumber in range(1, lineCount)
         let lineLength = strwidth(getline(rowNumber))
