@@ -1,5 +1,10 @@
-let g:NERDTreeWindowResizer_RunOnce = 1
-let g:NERDTreeWindowResizer_CurrentSize = 0
+if !exists('g:NERDTreeWindowResizer_RunOnce')
+    let g:NERDTreeWindowResizer_RunOnce = 1
+endif
+
+if !exists('g:NERDTreeWindowResizer_CurrentSize')
+    let g:NERDTreeWindowResizer_CurrentSize = 0
+endif
 
 augroup NERDTreeWindowSizer
     autocmd!

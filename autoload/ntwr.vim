@@ -1,15 +1,15 @@
 if !exists('g:NERDTreeWindowResizer_RunOnce') | runtime! plugin/*.vim | endif
 
 function! ntwr#IsNERDTreeOpen()
-  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+    return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
 endfunction
 
 function! ntwr#SyncTree(event)
-  "let path = a:event.subject
-  if &modifiable && ntwr#IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
-      call ntwr#JumpToNERDTreeWindow()
-      call ntwr#SetNerdTreeWindowSize()
-      wincmd p
+    "let path = a:event.subject
+    if &modifiable && ntwr#IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
+        call ntwr#JumpToNERDTreeWindow()
+        call ntwr#SetNerdTreeWindowSize()
+        wincmd p
   endif
 endfunction
 
@@ -17,7 +17,7 @@ endfunction
 function! ntwr#JumpToNERDTreeWindow()
     let windowNr = bufwinnr(t:NERDTreeBufName)
     if windowNr > 0
-      execute windowNr 'wincmd w'
+        execute windowNr 'wincmd w'
     endif
 endfunction
 
@@ -28,12 +28,12 @@ function! ntwr#SetNerdTreeWindowSize()
     for rowNumber in range(1, lineCount)
         let lineLength = strwidth(getline(rowNumber))
         if lineLength > maxLineLength
-          let maxLineLength = lineLength
+            let maxLineLength = lineLength
         endif
     endfor
     if g:NERDTreeWindowResizer_CurrentSize != maxLineLength
-      execute "vertical resize " . maxLineLength
-      let g:NERDTreeWindowResizer_CurrentSize = maxLineLength
+        execute "vertical resize " . maxLineLength
+        let g:NERDTreeWindowResizer_CurrentSize = maxLineLength
     endif
 endfunction
 
