@@ -13,7 +13,6 @@ function! ntwr#SyncTree(event)
   endif
 endfunction
 
-
 function! ntwr#JumpToNERDTreeWindow()
     let windowNr = bufwinnr(t:NERDTreeBufName)
     if windowNr > 0
