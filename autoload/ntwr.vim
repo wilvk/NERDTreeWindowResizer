@@ -5,7 +5,7 @@ function! ntwr#IsNERDTreeOpen()
 endfunction
 
 function! ntwr#SyncTree(event)
-  let path = a:event.subject
+  "let path = a:event.subject
   if &modifiable && ntwr#IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
       call ntwr#JumpToNERDTreeWindow()
       call ntwr#SetNerdTreeWindowSize()
