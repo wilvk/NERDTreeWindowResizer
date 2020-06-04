@@ -12,5 +12,4 @@ augroup NERDTreeWindowSizer
     autocmd BufEnter    * call ntwr#SetNERDTreeWindowResizerEvents()
     autocmd BufReadPost * call ntwr#SyncTree(1)
     autocmd CursorHold  * call ntwr#SyncTree(1)
-    autocmd NERD_tree_* * call ntwr#SyncTree(1)
 augroup END
