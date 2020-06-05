@@ -14,7 +14,6 @@ if !exists('g:NERDTreeWindowResizer_NTStarted')
     let g:NERDTreeWindowResizer_NTStarted = 0
 endif
 
-
 function! s:IsNERDTreeOpen()
     return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
 endfunction
@@ -49,8 +48,6 @@ function! NERDTreeWindowResizerHandler(event)
       call s:JumpToNERDTreeWindow()
       call s:SetNerdTreeWindowSize()
   endif
-  let l:path = a:event.subject
-  call l:path.flagSet.clearFlags('winresize')
 endfunction
 
 function! ntwr#NERDTreeWindowResizerSetEvents()
