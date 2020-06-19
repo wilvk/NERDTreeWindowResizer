@@ -19,3 +19,7 @@ This can be installed using Vundle by:
 ```
     Plugin 'preservim/nerdtree'
 ```
+
+### Instructions:
+
+With the cursor in the NERDTree window, press `r` to refrest the window and the window should resize. It also updates on refresh events that are triggered on some directory traversals.
