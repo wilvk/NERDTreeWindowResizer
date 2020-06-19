@@ -22,4 +22,6 @@ This can be installed using Vundle by:
 
 ### Instructions:
 
-With the cursor in the NERDTree window, press `r` to refrest the window and the window should resize. It also updates on refresh events that are triggered on some directory traversals.
+With the cursor in the NERDTree window, press `r` to refresh. The window should resize.
+
+Window resizing occurs on NERDTree refresh events that are also triggered on some directory traversals.
